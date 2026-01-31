@@ -151,3 +151,98 @@ input:hover {
   align-self: flex-end;
   font-style: italic;
 }
+* {
+  box-sizing: border-box;
+}
+
+/* Telefonda SVG juda katta bo‘lib ketmasin */
+.create-new svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* =========================
+   RESPONSIVE (telefon)
+   ========================= */
+@media (max-width: 768px) {
+  /* Layoutni ustma-ust (column) qilamiz */
+  .notes-app {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  /* Sidebar (chap) endi yuqorida bo‘ladi */
+  .linke-seite {
+    width: 100%;
+    height: auto;              /* 100vh ni o‘chirib qo‘yamiz */
+    border-right: none;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    overflow-y: visible;       /* butun sahifa scroll bo‘lsin */
+    padding: 0.5rem;
+    margin-top: 0;
+  }
+
+  /* Create button full width */
+  .create-new {
+    width: 100%;
+    height: 3.2rem;
+    font-size: 1rem;
+  }
+
+  /* Notes list: kartalar full width bo‘lsin */
+  .notes-list {
+    margin-top: 1rem;
+  }
+
+  .note-entry {
+    width: 100%;
+    height: auto;
+    min-height: 5.2rem;
+    margin-top: 0.75rem;
+  }
+
+  .note-title {
+    font-size: 1.1rem;
+  }
+
+  .note-content-teaser {
+    font-size: 0.95rem;
+    -webkit-line-clamp: 2; /* telefonda qisqaroq */
+  }
+
+  .note-data {
+    font-size: 0.75rem;
+  }
+
+  /* Main content ham full width */
+  .main-content {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  /* Title + buttons telefonda pastga tushib ketmasin */
+  .title-and-save {
+    align-items: center;
+  }
+
+  /* Title font juda katta (3rem) — telefonda kichraytiramiz */
+  #title-input {
+    font-size: 1.6rem;
+    margin-right: 0;
+    padding: 0.4rem 0.6rem;
+  }
+
+  #content-input {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+
+  /* Save/Delete tugmalar kichikroq */
+  .save-note,
+  .delete-note {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-left: 0.4rem;
+  }
+}
+
